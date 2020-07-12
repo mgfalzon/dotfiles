@@ -7,4 +7,3 @@ vim xorg git unzip chromium ly termite qtile xf86-input-synaptics bluez bluez-ut
 Remember to setup trackpad, bluetooth, and audio!
 
 ![alt text](/screenshot.png?raw=true)
-
