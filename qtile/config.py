@@ -171,11 +171,11 @@ customWidgets = [
             padding = 0
             ),
    widget.TextBox(
-            text='◄',
+            text='◀',
             background = colors[0],
             foreground = colors[4],
-            padding=-5,
-            fontsize=60
+            padding=-2.1,
+            fontsize=30
             ),
    widget.CurrentLayout(
             foreground = colors[2],
@@ -183,11 +183,11 @@ customWidgets = [
             padding = 5
             ),
    widget.TextBox(
-            text='◄',
+            text='◀',
             background = colors[4],
             foreground = colors[5],
-            padding=-5,
-            fontsize=60
+            padding=-2.1,
+            fontsize=30
             ),
    widget.Clock(
             foreground = colors[2],
