@@ -11,14 +11,13 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " My Plugins
-Plugin 'jreybert/vimagit'
-Plugin 'preservim/nerdtree'
-Plugin 'vifm/vifm.vim'
-Plugin 'mattn/emmet-vim'
-Plugin 'tpope/vim-surround'     
-Plugin 'sheerun/vim-polyglot'
-Plugin 'chriskempson/base16-vim'
-Plugin 'ap/vim-css-color'
+Plugin 'jreybert/vimagit'           "git
+Plugin 'preservim/nerdtree'         "treeview
+Plugin 'vifm/vifm.vim'              "file manager
+Plugin 'sheerun/vim-polyglot'       "language support
+Plugin 'dense-analysis/ale'         "sytax support/linting
+Plugin 'alvan/vim-closetag'         "close html tags
+Plugin 'chriskempson/base16-vim'    "base16 colors
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -59,6 +58,13 @@ inoremap <C-h> <C-w>h
 inoremap <C-j> <C-w>j
 inoremap <C-k> <C-k>k
 inoremap <C-l> <C-l>l
+
+"Close Quotes/Parens"
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
 
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256

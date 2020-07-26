@@ -77,6 +77,9 @@ for i in groups:
         # Key([mod, "shift"], i.name, lazy.window.togroup(i.name)),
     ])
 
+# ocean -> border_focus=("#676f7a")
+# onedark 1 ->border_focus #353b45
+# onedark 2 ->border_focus #4d515b
 layouts = [
     layout.Max(),
     # layout.Stack(num_stacks=2),
@@ -84,7 +87,7 @@ layouts = [
     # layout.Bsp(),
     # layout.Columns(),
     # layout.Matrix(),
-    layout.MonadTall(name='stack', border_normal=('#2c303b'), border_focus=("#676f7a"), margin=10)
+    layout.MonadTall(name='stack', border_normal=('#2c303b'), border_focus=("#4d515b"), margin=10)
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
@@ -95,6 +98,7 @@ layouts = [
 ##### CUSTOM WIDGET SETTINGS #####
 
 ##### COLORS #####
+''' ocean
 colors = [["#2c303b", "#2c303b"], # panel background
           ["#3d4252", "#3d4252"], # background for current screen tab
           ["#ffffff", "#ffffff"], # font color for group names
@@ -102,6 +106,15 @@ colors = [["#2c303b", "#2c303b"], # panel background
           ["#bd626b", "#bd626b"], # border line color for other tab and odd widgets
           ["#a3bd8d", "#a3bd8d"], # color for the even widgets
           ["#a3bd8d", "#a3bd8d"]] # window name
+'''
+
+colors = [["#282c35", "#282c35"], # panel background
+          ["#393f4c", "#393f4c"], # background for current screen tab
+          ["#ffffff", "#ffffff"], # font color for group names
+          ["#61afef", "#61afef"], # border line color for current tab
+          ["#61afef", "#61afef"], # border line color for other tab and odd widgets
+          ["#c678dd", "#c678dd"], # color for the even widgets
+          ["#99c379", "#99c379"]] # window name
 
 ##### WIDGETS #####
 defaultWidgets = [
@@ -161,8 +174,8 @@ customWidgets = [
             text='◄',
             background = colors[0],
             foreground = colors[4],
-            padding=-.01,
-            fontsize=42
+            padding=-5,
+            fontsize=60
             ),
    widget.CurrentLayout(
             foreground = colors[2],
@@ -173,8 +186,8 @@ customWidgets = [
             text='◄',
             background = colors[4],
             foreground = colors[5],
-            padding=-.01,
-            fontsize=42
+            padding=-5,
+            fontsize=60
             ),
    widget.Clock(
             foreground = colors[2],
