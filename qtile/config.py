@@ -61,6 +61,9 @@ keys = [
     Key([mod, "control"], "r", lazy.restart()),
     Key([mod, "control"], "q", lazy.shutdown()),
     Key([mod], "r", lazy.spawncmd()),
+
+    # Matt's Keybindings
+    Key([mod], "e", lazy.spawn("termite -e vifm")),
 ]
 
 groups = [Group(i) for i in "asdfuiop"]
@@ -277,4 +280,3 @@ import subprocess
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call([home])
-
