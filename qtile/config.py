@@ -42,7 +42,7 @@ keys = [
     Key([mod, "control"], "j", lazy.layout.shuffle_up()),
 
     # Switch window focus to other pane(s) of stack
-    Key([mod], "space", lazy.layout.next()),
+    # Key([mod], "space", lazy.layout.next()),
 
     # Swap panes of split stack
     Key([mod, "shift"], "space", lazy.layout.rotate()),
@@ -62,22 +62,30 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown()),
     Key([mod], "r", lazy.spawncmd()),
 
-    # Matt's Keybindings
-    Key([mod], "e", lazy.spawn("termite -e vifm")),
+    ### Matt's Custom Keybindings ###
+
+    # File Manager
+    Key([mod], "e", lazy.spawn('termite -e vifm')),
+
+    # Windows Workspace Management
+    Key(["mod1"], "Tab", lazy.layout.next()),
+    Key([mod, "control"], "Right", lazy.screen.next_group()),
+    Key([mod, "control"], "Left", lazy.screen.prev_group()),
 ]
 
-groups = [Group(i) for i in "asdfuiop"]
+groups = [Group(i) for i in "12345678"]
+
 
 for i in groups:
     keys.extend([
         # mod1 + letter of group = switch to group
         Key([mod], i.name, lazy.group[i.name].toscreen()),
-
+        # Key([mod, "control"], "Right", lazy.group[nextGroup(i.name)].toscreen()),
         # mod1 + shift + letter of group = switch to & move focused window to group
-        Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True)),
-        # Or, use below if you prefer not to switch to that group.
+        # Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True)),
+        # Or, use below if you prefer not to swtch to that group.
         # # mod1 + shift + letter of group = move focused window to group
-        # Key([mod, "shift"], i.name, lazy.window.togroup(i.name)),
+        Key([mod, "shift"], i.name, lazy.window.togroup(i.name)),
     ])
 
 # ocean -> border_focus=("#676f7a")
