@@ -19,6 +19,7 @@ Plugin 'dense-analysis/ale'         "sytax support/linting
 Plugin 'alvan/vim-closetag'         "close html tags
 Plugin 'chriskempson/base16-vim'    "base16 colors
 Plugin 'vim-scripts/vim-auto-save'  "autosave
+Plugin 'junegunn/fzf.vim'           "ctrl p
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -39,6 +40,8 @@ filetype plugin indent on    " required
 map <C-b> :NERDTreeToggle<CR>
 map <Leader>vv :Vifm<CR>
 let g:auto_save = 1
+
+map <C-p> :Files .<CR>
 
 "Basic Settings"
 set nocompatible

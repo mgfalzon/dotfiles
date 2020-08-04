@@ -96,13 +96,13 @@ for i in groups:
 # onedark 1 ->border_focus #353b45
 # onedark 2 ->border_focus #4d515b
 layouts = [
-    layout.Max(),
+    layout.MonadTall(name='stack', border_normal=('#2c303b'), border_focus=("#4d515b"), margin=10)
     # layout.Stack(num_stacks=2),
     # Try more layouts by unleashing below layouts.
     # layout.Bsp(),
     # layout.Columns(),
     # layout.Matrix(),
-    layout.MonadTall(name='stack', border_normal=('#2c303b'), border_focus=("#4d515b"), margin=10)
+    layout.Max(),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
