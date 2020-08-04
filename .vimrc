@@ -20,6 +20,8 @@ Plugin 'alvan/vim-closetag'         "close html tags
 Plugin 'chriskempson/base16-vim'    "base16 colors
 Plugin 'vim-scripts/vim-auto-save'  "autosave
 Plugin 'junegunn/fzf.vim'           "ctrl p
+Plugin 'godlygeek/tabular'          "Tables
+Plugin 'plasticboy/vim-markdown'    "Markdown
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -35,13 +37,12 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
 " Plugin Settings
 map <C-b> :NERDTreeToggle<CR>
-map <Leader>vv :Vifm<CR>
-let g:auto_save = 1
-
+map <Leader>e :Vifm<CR>
+map <Leader>s :AutoSaveToggle<CR>
 map <C-p> :Files .<CR>
+let g:vim_markdown_new_list_item_indent = 2
 
 "Basic Settings"
 set nocompatible
