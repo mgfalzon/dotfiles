@@ -6,4 +6,4 @@ vim xorg git unzip firefox ly termite qtile xf86-input-synaptics bluez bluez-uti
 
 Remember to setup trackpad, bluetooth, and audio!
 
-![alt text](/screenshot.png?raw=true)
+![alt text](/imgs/thumbnail.png?raw=true)

@@ -67,6 +67,9 @@ keys = [
     # File Manager
     Key([mod], "e", lazy.spawn('termite -e vifm')),
 
+    # Browser
+    Key([mod], "f", lazy.spawn("firefox")),
+
     # Windows Workspace Management
     Key(["mod1"], "Tab", lazy.layout.next()),
     Key([mod, "control"], "Right", lazy.screen.next_group()),

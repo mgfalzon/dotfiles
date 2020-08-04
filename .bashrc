@@ -13,6 +13,7 @@ alias fgsm='cd /opt/lampp/htdocs/FGSM'
 alias xampp='sudo /opt/lampp/xampp'
 alias vifm='vifm .'
 alias config='cd ~/.config'
+alias magit='vim -c MagitOnly'
 
 PS1='\W \$ '
 

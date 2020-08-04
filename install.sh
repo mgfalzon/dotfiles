@@ -1,13 +1,6 @@
 #!/bin/sh
 
-# qtile
-cp -r  qtile ~/.config
-
-# termite
-cp -r termite ~/.config
-
-# wallpaper
-cp -r wallpaper ~/.config
-
+# repo => local
+cp -r .config ~/.config
 cp .bashrc ~/
 cp .vimrc ~/
