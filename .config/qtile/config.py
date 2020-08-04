@@ -72,8 +72,9 @@ keys = [
 
     # Windows Workspace Management
     Key(["mod1"], "Tab", lazy.layout.next()),
-    Key([mod, "control"], "Right", lazy.screen.next_group()),
-    Key([mod, "control"], "Left", lazy.screen.prev_group()),
+    Key([mod], "space", lazy.layout.next()),
+    Key([mod], "l", lazy.screen.next_group()),
+    Key([mod], "h", lazy.screen.prev_group()),
 ]
 
 groups = [Group(i) for i in "12345678"]
