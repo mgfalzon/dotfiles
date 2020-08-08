@@ -1,0 +1,5 @@
+rofi.color-enabled: true
+rofi.color-window: #282c34, #282c34, #282c34
+rofi.color-normal: #282c34, #d8dee8, #282c34, #282c34, #61afef
+rofi.color-active: #282c34, #c778dd, #282c34, #282c34, #98c379
+rofi.color-urgent: #282c34, #e5c07a, #282c34, #282c34, #e5c07a

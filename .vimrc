@@ -52,10 +52,13 @@ set hidden
 set mouse=a
 set smartindent
 set clipboard=unnamed
+set wrap!
 
 "Spacing"
 set expandtab
-set ts=4 sw=4
+set ts=2 sw=2
+"au Filetype markdown setl ts=2 sw=2
+"au Filetype python setl ts=2 sw=2
 
 "Splits"
 set splitbelow splitright

@@ -30,16 +30,19 @@ from libqtile import layout, bar, widget
 
 from typing import List  # noqa: F401
 
+# Matt's Imports
+from libqtile.config import ScratchPad, DropDown
+
 mod = "mod4"
 
 keys = [
     # Switch between windows in current stack pane
-    Key([mod], "k", lazy.layout.down()),
-    Key([mod], "j", lazy.layout.up()),
+    Key([mod], "j", lazy.layout.down()),
+    Key([mod], "k", lazy.layout.up()),
 
     # Move windows up or down in current stack
-    Key([mod, "control"], "k", lazy.layout.shuffle_down()),
-    Key([mod, "control"], "j", lazy.layout.shuffle_up()),
+    Key([mod, "control"], "j", lazy.layout.shuffle_down()),
+    Key([mod, "control"], "k", lazy.layout.shuffle_up()),
 
     # Switch window focus to other pane(s) of stack
     # Key([mod], "space", lazy.layout.next()),
@@ -60,12 +63,23 @@ keys = [
 
     Key([mod, "control"], "r", lazy.restart()),
     Key([mod, "control"], "q", lazy.shutdown()),
-    Key([mod], "r", lazy.spawncmd()),
+    # Key([mod], "r", lazy.spawncmd()),
 
     ### Matt's Custom Keybindings ###
 
     # File Manager
     Key([mod], "e", lazy.spawn('termite -e vifm')),
+
+    # Rofi
+    Key([mod], "r", lazy.spawn(
+        'rofi -modi drun -display-drun "" ' +
+        '-lines 12 -padding 18 ' +
+        '-width 60 -location 0 ' +
+        '-columns 2 ' +
+        '-font "Ubuntu Mono 12" ' +
+        '-hide-scrollbar ' +
+        '-show'
+    )),
 
     # Browser
     Key([mod], "f", lazy.spawn("firefox")),
@@ -75,10 +89,13 @@ keys = [
     Key([mod], "space", lazy.layout.next()),
     Key([mod], "l", lazy.screen.next_group()),
     Key([mod], "h", lazy.screen.prev_group()),
+
+    # Testing
+    Key([mod], "o", lazy.screen.increase_ratio()),
+    Key([mod], "p", lazy.screen.decrease_ratio()),
 ]
 
-groups = [Group(i) for i in "12345678"]
-
+groups = [Group(i) for i in "1234"]
 
 for i in groups:
     keys.extend([
@@ -95,15 +112,16 @@ for i in groups:
 # ocean -> border_focus=("#676f7a")
 # onedark 1 ->border_focus #353b45
 # onedark 2 ->border_focus #4d515b
+# layout.MonadTall(name='stack', border_normal=('#2c303b'), border_focus=("#4d515b"), margin=10),
 layouts = [
-    layout.MonadTall(name='stack', border_normal=('#2c303b'), border_focus=("#4d515b"), margin=10),
-    layout.Max()
+    layout.MonadTall(name='stack', border_width=0, margin=15),
+    layout.Max(margin=10),
     # layout.Stack(num_stacks=2),
     # Try more layouts by unleashing below layouts.
     # layout.Bsp(),
     # layout.Columns(),
     # layout.Matrix(),
-    # layout.MonadWide(),
+    # layout.MonadWide(name='wide', border_normal=('#2c303b'), border_focus=("#4d515b"), margin=10),
     # layout.RatioTile(),
     # layout.Tile(),
     # layout.TreeTab(),
@@ -242,14 +260,17 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
+'''
 screens = [
     Screen(
         top=bar.Bar(
             customWidgets,
-            24,
+            24
         ),
     ),
 ]
+'''
+screens =[Screen()]
 
 # Drag floating layouts.
 mouse = [
