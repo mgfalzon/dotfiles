@@ -37,11 +37,21 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+"
 " Plugin Settings
 map <C-b> :NERDTreeToggle<CR>
 map <Leader>e :Vifm<CR>
 map <Leader>s :AutoSaveToggle<CR>
-map <C-p> :Files .<CR>
+map <C-o> :Buffers<CR>
+
+
+call system('!git rev-parse --is-inside-work-tree')
+if v:shell_error == 0
+  noremap <silent> <C-p> :GFiles --cached --others --exclude-standard<CR>
+else
+  noremap <silent> <C-p> :Files<CR>
+endif
+
 let g:vim_markdown_new_list_item_indent = 2
 
 "Basic Settings"

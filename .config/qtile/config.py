@@ -30,8 +30,15 @@ from libqtile import layout, bar, widget
 
 from typing import List  # noqa: F401
 
-# Matt's Imports
-from libqtile.config import ScratchPad, DropDown
+# Startup Config
+from libqtile import hook
+import os
+import subprocess
+
+@hook.subscribe.startup_once
+def autostart():
+    script = os.path.expanduser('~/.config/bin/startup')
+    subprocess.call([script])
 
 mod = "mod4"
 
@@ -70,6 +77,9 @@ keys = [
     # File Manager
     Key([mod], "e", lazy.spawn('termite -e vifm')),
 
+    Key([mod], "p", lazy.spawn('termite -e search')),
+    Key([mod], "o", lazy.spawn('termite -e open')),
+
     # Rofi
     Key([mod], "r", lazy.spawn(
         'rofi -modi drun -display-drun "" ' +
@@ -89,10 +99,6 @@ keys = [
     Key([mod], "space", lazy.layout.next()),
     Key([mod], "l", lazy.screen.next_group()),
     Key([mod], "h", lazy.screen.prev_group()),
-
-    # Testing
-    Key([mod], "o", lazy.screen.increase_ratio()),
-    Key([mod], "p", lazy.screen.decrease_ratio()),
 ]
 
 groups = [Group(i) for i in "1234"]
@@ -317,12 +323,3 @@ focus_on_window_activation = "smart"
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
 
-# Matt's Config
-from libqtile import hook
-import os
-import subprocess
-
-@hook.subscribe.startup_once
-def autostart():
-    home = os.path.expanduser('~/.config/qtile/autostart.sh')
-    subprocess.call([home])

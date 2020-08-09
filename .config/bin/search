@@ -1,0 +1,3 @@
+#!/bin/bash
+
+vim $(rg --hidden --files --sort-files | fzf)

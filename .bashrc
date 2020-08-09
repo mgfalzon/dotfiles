@@ -11,25 +11,15 @@ alias ls='ls --color=auto'
 # Matt's Config
 alias fgsm='cd /opt/lampp/htdocs/FGSM'
 alias xampp='sudo /opt/lampp/xampp'
-alias vifm='vifm .'
-alias config='cd ~/.config'
 alias magit='vim -c MagitOnly'
+alias s='vim -c :Files'
+alias config='cd ~/.config'
+alias picom='picom --experimental-backends --backend glx'
+
+export PATH="$HOME/.config/bin:$PATH"
+export FZF_DEFAULT_COMMAND='rg --files --hidden --sort-files'
 
 PS1='\W \$ '
-
-# rofi
-#alias rofi='rofi -sidebar-mode \
-#-modi run,drun,window \
-#-lines 12 \
-#-padding 18 \
-#-width 60 \
-#-location 0 \
-#-show drun \
-#-columns 3 \
-#-font "Ubuntu Mono 12" \'
-
-# picom
-alias picom='picom --experimental-backends --backend glx'
 
 # BASE16_SHELL
 BASE16_SHELL="$HOME/.config/base16-shell/"
