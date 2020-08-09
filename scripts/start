@@ -1,9 +1,0 @@
-#!/bin/bash
-# psuedo python dev-server
-
-while true
-do 
-python $1
-sleep 5 
-clear
-done

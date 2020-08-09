@@ -4,6 +4,6 @@
 while true
 do 
 python $1
-sleep 5 
+sleep 2 
 clear
 done

@@ -6,5 +6,5 @@ cp .bashrc ~/
 cp .vimrc ~/
 
 # Needed for qtile keybindings
-sudo cp -i .config/bin/search /usr/bin
-sudo cp -i .config/bin/open /usr/bin
+# sudo cp -i .config/bin/search /usr/bin
+# sudo cp -i .config/bin/open /usr/bin
