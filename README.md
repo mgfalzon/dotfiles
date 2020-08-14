@@ -1,11 +1,22 @@
 # dotfiles
-Arch Linux Config
 
-Installs:
+<img src="https://image.flaticon.com/icons/svg/226/226772.svg" align="right"
+     alt="Icon" width="120" height="178">
+     
+My Custom Arch Linux Install
+
+## Packages
 vim xorg git unzip unrar firefox ly termite qtile 
 xf86-input-synaptics bluez bluez-utils alsa-utls 
 acpi yay xampp feh fzf pandoc picom dunst
 
-Remember to setup trackpad, bluetooth, and audio!
+## Additional Notes
+* Remember to setup trackpad, bluetooth, and audio!
 
-![alt text](/imgs/thumbnail.png?raw=true)
+
+<br/>
+<h4 align="center">Preview</h4>
+
+<p align="center">
+  <img src="./thumbnail.png" alt="Desktop">
+</p>
