@@ -18,5 +18,5 @@ acpi yay xampp feh fzf pandoc picom dunst
 <h4 align="center">Preview</h4>
 
 <p align="center">
-  <img src="./thumbnail.png" alt="Desktop">
+  <img src="./imgs/thumbnail.png" alt="Desktop">
 </p>
