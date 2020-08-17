@@ -18,13 +18,6 @@ def autostart():
 mod = "mod4"
 
 keys = [
-    # Switch between windows in current stack pane
-    Key([mod], "j", lazy.layout.down()),
-    Key([mod], "k", lazy.layout.up()),
-
-    # Move windows up or down in current stack
-    Key([mod, "control"], "j", lazy.layout.shuffle_down()),
-    Key([mod, "control"], "k", lazy.layout.shuffle_up()),
 
     # Layout switching, kill window, restart, shutdown
     Key([mod], "Tab", lazy.next_layout()),
@@ -34,10 +27,11 @@ keys = [
 
     # Workspace Management
     Key(["mod1"], "Tab", lazy.layout.next()),
-    Key([mod], "space", lazy.layout.next()),
-
     Key([mod, "control"], "Right", lazy.screen.next_group()),
     Key([mod, "control"], "Left", lazy.screen.prev_group()),
+
+    Key([mod, "control"], "l", lazy.screen.next_group()),
+    Key([mod, "control"], "h", lazy.screen.prev_group()),
 
     # Layout Management
     Key([mod], "h", lazy.layout.left()),

@@ -23,8 +23,6 @@ export PATH="$HOME/.config/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export FZF_DEFAULT_COMMAND='rg --files --hidden --sort-files'
 
-export PATH_TO_FX="~/javafx-sdk-11.0.2/lib"
-
 PS1='\W \$ '
 
 # BASE16_SHELL

@@ -23,7 +23,7 @@ batteryNotify &
 ## Visual ##
 
 # Wallpaper
-feh --bg-fill ~/.config/wallpaper/dark.png
+feh --bg-fill ~/.config/wallpaper/retro-pc.jpg
 
 # Compositor
 picom &
