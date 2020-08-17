@@ -27,3 +27,6 @@ feh --bg-fill ~/.config/wallpaper/dark.png
 
 # Compositor
 picom &
+
+# Detect External Monitor
+switch-monitor

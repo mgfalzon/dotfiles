@@ -15,9 +15,15 @@ alias magit='vim -c MagitOnly'
 alias s='vim -c :Files'
 alias config='cd ~/.config'
 alias picom='picom --experimental-backends --backend glx'
+alias task='clear && task'
+alias t='task'
+alias tl='task list'
 
 export PATH="$HOME/.config/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export FZF_DEFAULT_COMMAND='rg --files --hidden --sort-files'
+
+export PATH_TO_FX="~/javafx-sdk-11.0.2/lib"
 
 PS1='\W \$ '
 

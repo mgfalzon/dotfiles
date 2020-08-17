@@ -3,13 +3,13 @@
 foreground          = #abb2bf
 foreground_bold     = #abb2bf
 cursor              = #abb2bf
-cursor_foreground   = #282c34
-background          = #282c34
+cursor_foreground   = #282c35
+background          = #282c35
 
 # 16 color space
 
 # Black, Gray, Silver, White
-color0  = #282c34
+color0  = #282c35
 color8  = #545862
 color7  = #abb2bf
 color15 = #c8ccd4
