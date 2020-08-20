@@ -15,7 +15,7 @@ Plugin 'jreybert/vimagit'           "git
 Plugin 'preservim/nerdtree'         "treeview
 Plugin 'vifm/vifm.vim'              "file manager
 Plugin 'sheerun/vim-polyglot'       "language support
-Plugin 'dense-analysis/ale'         "sytax support/linting
+""Plugin 'dense-analysis/ale'       "sytax support/linting
 Plugin 'alvan/vim-closetag'         "close html tags
 Plugin 'chriskempson/base16-vim'    "base16 colors
 Plugin 'vim-scripts/vim-auto-save'  "autosave

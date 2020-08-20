@@ -26,14 +26,17 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown()),
 
     # Workspace Management
-    Key(["mod1"], "Tab", lazy.layout.next()),
     Key([mod, "control"], "Right", lazy.screen.next_group()),
     Key([mod, "control"], "Left", lazy.screen.prev_group()),
-
     Key([mod, "control"], "l", lazy.screen.next_group()),
     Key([mod, "control"], "h", lazy.screen.prev_group()),
+    Key([mod, "control"], "1", lazy.window.togroup("1")),
+    Key([mod, "control"], "2", lazy.window.togroup("2")),
+    Key([mod, "control"], "3", lazy.window.togroup("3")),
+    Key([mod, "control"], "4", lazy.window.togroup("4")),
 
     # Layout Management
+    Key(["mod1"], "Tab", lazy.layout.next()),
     Key([mod], "h", lazy.layout.left()),
     Key([mod], "l", lazy.layout.right()),
     Key([mod], "j", lazy.layout.down()),
@@ -45,6 +48,9 @@ keys = [
     Key([mod], "i", lazy.layout.grow()),
     Key([mod], "m", lazy.layout.shrink()),
     Key([mod], "n", lazy.layout.normalize()),
+
+    # Window Management
+    Key([mod], "Up", lazy.window.toggle_fullscreen()),
 
     # Terminal
     Key([mod], "Return", lazy.spawn("termite")),
@@ -138,6 +144,13 @@ widgets = [
             background = colors[0],
             padding = 0
             ),
+#  widget.TextBox(
+#           text='◀',
+#           background = colors[0],
+#           foreground = colors[5],
+#           padding=-3.5,
+#           fontsize=55
+#           ),
    widget.TextBox(
             text='◀',
             background = colors[0],
