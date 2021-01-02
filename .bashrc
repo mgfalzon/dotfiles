@@ -18,10 +18,14 @@ alias picom='picom --experimental-backends --backend glx'
 alias task='clear && task'
 alias t='task'
 alias tl='task list'
+alias audio='alsamixer'
 
 export PATH="$HOME/.config/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export FZF_DEFAULT_COMMAND='rg --files --hidden --sort-files'
+export PATH="$HOME/.opam/default/bin:$PATH"
+export PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
+export FZF_DEFAULT_COMMAND='rg --files --sort-files'
+# --hidden on fzf
 
 PS1='\W \$ '
 

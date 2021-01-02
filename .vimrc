@@ -13,7 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 " My Plugins
 Plugin 'jreybert/vimagit'           "git
 Plugin 'preservim/nerdtree'         "treeview
-Plugin 'vifm/vifm.vim'              "file manager
+Plugin 'francoiscabrol/ranger.vim'  "file manager
 Plugin 'sheerun/vim-polyglot'       "language support
 ""Plugin 'dense-analysis/ale'       "sytax support/linting
 Plugin 'alvan/vim-closetag'         "close html tags
@@ -40,7 +40,7 @@ filetype plugin indent on    " required
 "
 " Plugin Settings
 map <C-b> :NERDTreeToggle<CR>
-map <Leader>e :Vifm<CR>
+map <Leader>e :Ranger<CR>
 map <Leader>s :AutoSaveToggle<CR>
 map <C-o> :Buffers<CR>
 
@@ -53,6 +53,7 @@ else
 endif
 
 let g:vim_markdown_new_list_item_indent = 2
+let g:vim_markdown_folding_disabled = 1
 
 "Basic Settings"
 set nocompatible

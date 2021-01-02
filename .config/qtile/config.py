@@ -56,7 +56,7 @@ keys = [
     Key([mod], "Return", lazy.spawn("termite")),
 
     # File Manager
-    Key([mod], "e", lazy.spawn('termite -e vifm')),
+    Key([mod], "e", lazy.spawn('termite -e ranger')),
 
     # Browser
     Key([mod], "f", lazy.spawn("firefox")),
@@ -128,7 +128,7 @@ widgets = [
             background = colors[0]
             ),
    widget.Prompt(
-            font="Ubuntu Mono",
+            font="Ubuntu Bold",
             padding=10,
             foreground = colors[3],
             background = colors[0]
@@ -144,28 +144,40 @@ widgets = [
             background = colors[0],
             padding = 0
             ),
-#  widget.TextBox(
-#           text='◀',
-#           background = colors[0],
-#           foreground = colors[5],
-#           padding=-3.5,
-#           fontsize=55
-#           ),
+    # ◀ ⟨
+  widget.TextBox(
+           font="Ubuntu Bold",
+           text='(',
+           background = colors[5],
+           foreground = colors[0],
+           padding=-9,
+           fontsize=90
+           ),
+   widget.Battery(
+            font="Ubuntu Bold",
+            foreground = colors[2],
+            background = colors[5],
+            padding = 5,
+            format='{char} {percent:2.0%}'
+            ),
    widget.TextBox(
-            text='◀',
-            background = colors[0],
-            foreground = colors[3],
-            padding=-3.5,
-            fontsize=55
+            font="Ubuntu Bold",
+            text='(',
+            background = colors[3],
+            foreground = colors[5],
+            padding=-10,
+            fontsize=90
             ),
    widget.Clock(
+            font="Ubuntu Bold",
             foreground = colors[2],
             background = colors[3],
+            padding = 5,
             format="%A, %B %d  [ %H:%M ]"
             ),
    widget.Sep(
             linewidth = 0,
-            padding = 10,
+            padding = 5,
             foreground = colors[0],
             background = colors[3]
             ),
