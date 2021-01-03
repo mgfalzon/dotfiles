@@ -8,3 +8,7 @@ cp .vimrc ~/
 # Needed for qtile keybindings
 # sudo cp -i .config/bin/search /usr/bin
 # sudo cp -i .config/bin/open /usr/bin
+
+# Needed for slim 
+# Update current-theme in /etc/slim.conf
+# sudo cp -r .config/slim /usr/share
