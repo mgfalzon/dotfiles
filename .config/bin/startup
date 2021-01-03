@@ -22,6 +22,9 @@ batteryNotify &
 
 ## Visual ##
 
+# Panel
+~/.config/polybar/launch.sh
+
 # Wallpaper
 feh --bg-fill ~/.config/wallpaper/retro-pc.jpg
 

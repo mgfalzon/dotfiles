@@ -185,10 +185,10 @@ widgets = [
 
 screens = [
     Screen(
-        top=bar.Bar(
-            widgets,
-            24
-        ),
+    #    top=bar.Bar(
+    #        widgets,
+    #        24
+    #    ),
     ),
 ]
 
