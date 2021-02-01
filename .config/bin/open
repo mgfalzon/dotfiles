@@ -1,3 +1,0 @@
-#!/bin/bash
-
-vifm --select $(rg --files --sort-files --hidden --null 2> /dev/null | xargs -0 dirname | uniq | fzf)

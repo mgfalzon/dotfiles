@@ -1,9 +1,0 @@
-#!/bin/bash
-# psuedo java dev-server
-
-while true
-do 
-javac $1.java && java $1 && rm $1.class
-sleep 2 
-clear
-done

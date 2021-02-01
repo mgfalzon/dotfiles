@@ -1,15 +1,5 @@
 #!/bin/bash
 
 # local => repo
-cp -r ~/.config/qtile .config
-cp -r ~/.config/termite .config
-cp -r ~/.config/wallpaper .config
-cp -r ~/.config/gtk-3.0 .config
-cp -r ~/.config/picom .config
-cp -r ~/.config/dunst .config
-cp -r ~/.config/rofi .config
-cp -r ~/.config/slim .config
-cp -r ~/.config/polybar .config
-cp -r ~/.config/bin .config
 cp -r ~/.bashrc .
 cp -r ~/.vimrc .
